@@ -97,7 +97,7 @@ $err .= '<!DOCTYPE html>
 </html>';
 //$dbconn = mysqli_connect($_SESSION['host'],$_SESSION['username'],$_SESSION['password'])
 try{
-    $dbconn = new mysqli($_SESSION['server'], $_SESSION['username'], $_SESSION['password'], '', $_SESSION['port']);
+    $dbconn = new mysqli($_SESSION['server'], $_SESSION['username'], $_SESSION['password'], '', $_SESSION['port'], NULL, MYSQLI_CLIENT_SSL);
     } catch (Exception $e) {
         // echo 'Caught exception: ', $e->getMessage(), "\n";
         exit($err);
